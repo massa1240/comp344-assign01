@@ -1,0 +1,71 @@
+.register #form {
+	margin-top: 35px;
+	padding-top: 10px;
+	margin-bottom: 20px;
+}
+
+fieldset {
+	margin-top: 15px;
+}
+
+.search-loading {
+	margin: -22px 0 0 104px;
+	position: absolute;
+	display: none;
+}
+
+#noemailfound {
+	display: none;
+}
+
+#suburb-list {
+	display: none;
+	padding: 10px 30px;
+}
+
+#address {
+	display: none;
+}
+
+#form input.cc-expiry {
+	float: left;
+	width: 49%;
+}
+
+#form input[name="cc-month"] {
+	margin-right: 2%;
+}
+
+.error {
+	color: red;
+}
+
+header {
+	margin-bottom: 20px;
+}
+
+.category-products .panel-default .panel-heading .panel-title a:hover, .category-products .panel-default .panel-heading .panel-title.selected a {
+	color:#FE980F;
+}
+
+.productinfo .title {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-height: 20px;
+	padding: 0 10px;
+}
+
+.product-image-wrapper {
+	height: 456px;
+}
+
+.productinfo img {
+	max-height: 269px;
+	max-width: 100%;
+}
+
+#details {
+	padding-left: 25px;
+	padding-right: 25px;
+}

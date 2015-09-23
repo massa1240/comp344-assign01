@@ -1,0 +1,88 @@
+{% extends 'layout/base.twig' %}
+{% block body_class %}register{% endblock %}
+{% block content %}
+
+<section id="form"><!--form-->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3 com-sm-offset-1">
+				<h3>Sign up now!</h3>
+				<p>First, fill up you e-mail to check if you are elegible to register. Then fill up the rest of the information and click "sign up"</p>
+				<p>In order to validate your identity, you have to provide a (fake) credit card, but it will not be stored.</p>
+				<p>All fields are required and you must provide a valid Macquarie e-mail.</p>
+				<br>
+				<br>
+				<br>
+			</div>
+			<div class="col-sm-4 col-sm-offset-1">
+				<div class="signup-form"><!--sign up form-->
+					<form id="registration" method="POST">
+						<input type="email" required="true" name="email" placeholder="Email Address" />
+						<div>
+							<button id="search-email" type="button" class="btn btn-default">Search</button>
+							<img id="search-email-loading" class="search-loading" src="/mqauth/43413846/public/images/ajax-loader.gif">
+						</div>
+						<fieldset class="hidden form-hidden">
+							<legend>Personal info</legend>
+							<p id="name"><strong>Name:</strong> <span></span></p>
+							<p id="mqid"><strong></strong> <span></span></p>
+							<input type="password" name="password" required="true" placeholder="Password"/>
+							<input type="password" name="confirm_password" required="true" placeholder="Confirm password"/>
+						</fieldset>
+
+						<fieldset class="hidden form-hidden">
+							<legend>Address</legend>
+
+							<input type="text" required="true" name="address" placeholder="Address"/>
+							<div id="search-suburb">
+								<input type="text" placeholder="Suburb/City/Postcode"/>
+								<div>
+									<button type="button" class="btn btn-default">Search</button>
+									<img id="search-suburb-loading" class="search-loading" src="/mqauth/43413846/public/images/ajax-loader.gif">
+								</div>
+							</div>
+
+							<img id="search-suburb-loading" class="search-loading" src="/mqauth/43413846/public/images/ajax-loader.gif">
+							<ul id="suburb-list"></ul>
+
+							<div id="address">
+								<p id="place-suburb"><strong>Suburb: </strong><span></span></p>
+								<p id="place-state"><strong>State: </strong><span></span></p>
+								<p id="place-postcode"><strong>Postcode: </strong><span></span></p>
+								<p><strong>Country: </strong>Australia</p>
+								<a id="reset-address" href="#">Reselect suburb</a>
+							</div>
+
+							<input type="hidden" required="true" name="postcode"/>
+							<input type="hidden" required="true" name="state"/>
+							<input type="hidden" required="true" name="suburb"/>
+							
+						</fieldset>
+
+						<fieldset class="hidden form-hidden">
+							<legend>Credit card</legend>
+
+							<input type="text" required="true" name="cc-number" placeholder="Card number" maxlength="10" />
+							<input type="text" required="true" name="cc-holder" placeholder="Card holder" maxlength="20" />
+							<input type="text" required="true" name="cc-ccv" placeholder="CCV" maxlength="3" />
+							<input class="cc-expiry" type="text" required="true" name="cc-month" maxlength="2" placeholder="Expiry (mm)"/>
+							<input class="cc-expiry" type="text" required="true" name="cc-year" maxlength="2" placeholder="Expiry (yy)"/>
+						</fieldset>
+
+						<fieldset>
+							<button id="signup" class="form-hidden hidden" type="submit" class="btn btn-default">Signup</button>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+{% endblock %}
+
+{% block custom_js %}
+	<script src="/mqauth/43413846/public/js/pages/register.js"></script>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'layout/base_authenticated.twig' %}
+
+{% block body_class %}browse-books{% endblock %}
+
+{% block content %}
+
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="left-sidebar">
+					<h2>Units</h2>
+					<div class="panel-group category-products"><!--category-productsr-->
+					{% for unit in units %}
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title{% if unit.code == selected_unit %} selected{% endif %}"><a href="{{urlFor('browse-books-by-unit',{"unit":unit.code})}}">{{unit.name}}</a></h4>
+							</div>
+						</div>
+					{% endfor %}
+					</div><!--/category-products-->
+				</div>
+			</div>
+			
+			<div class="col-sm-9 padding-right">
+				<div class="features_items"><!--features_items-->
+					<h2 class="title text-center">Books</h2>
+					{% for book in books %}
+					
+					<div class="col-sm-4">
+						<div class="product-image-wrapper">
+							<div class="single-products">
+								<div class="productinfo text-center">
+									<a href="{{urlFor('view-book',{'book':book.isbn})}}"><img src="/mqauth/43413846/public/images/books/{% if book.picture %}{{book.picture}}{% else %}no_image.jpg{% endif %}" alt="" /></a>
+									<h2>${{book.price}}</h2>
+									<p class="title" title="{{book.title}}"><a href="{{urlFor('view-book',{'book':book.isbn})}}">{{book.title}}</a></p>
+									<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+								</div>
+							</div>
+							<div class="choose">
+								<ul class="nav nav-pills nav-justified">
+									<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				{% else %}
+					<p>Sorry, no books were found.</p>
+				{% endfor %}
+
+				</div><!--features_items-->
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>COMP344 Assignment 1 2014 + Jose Erima Fernandes Junior + 43413846</title>
+    <link href="/mqauth/43413846/public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/mqauth/43413846/public/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/mqauth/43413846/public/css/prettyPhoto.css" rel="stylesheet">
+    <link href="/mqauth/43413846/public/css/price-range.css" rel="stylesheet">
+    <link href="/mqauth/43413846/public/css/animate.css" rel="stylesheet">
+	<link href="/mqauth/43413846/public/css/main.css" rel="stylesheet">
+	<link href="/mqauth/43413846/public/css/custom.css" rel="stylesheet">
+	<link href="/mqauth/43413846/public/css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="/images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/mqauth/43413846/public/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/mqauth/43413846/public/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/mqauth/43413846/public/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/mqauth/43413846/public/images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+
+<body class="{% block body_class %}{% endblock %}">
+	<header id="header"><!--header-->
+		<div class="header_top"><!--header_top-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+								<li><a href="#"><i class="fa fa-envelope"></i> COMP344 Assignment 1 2014 + Jose Erima Fernandes Junior + 43413846</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="https://facebook.com/jefernandes.junior"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="https://www.linkedin.com/in/jefernandesjunior"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="https://plus.google.com/+JEFernandesJúnior/posts"><i class="fa fa-google-plus"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+		
+		<div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="logo pull-left">
+							<a href="{% block logo_link %}{{ urlFor('home') }}{% endblock %}"><img src="/mqauth/43413846/public/images/home/logo.png" alt="" /></a>
+						</div>
+					</div>
+					{% block header_menu %}{% endblock %}
+				</div>
+			</div>
+		</div><!--/header-middle-->
+	</header><!--/header-->
+	
+	{% block content %}
+	{% endblock %}
+	
+	<footer id="footer"><!--Footer-->
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="companyinfo">
+							<h2><span>e</span>-shopper</h2>
+							<p>COMP344 Assignment 1 2014<br>Jose Erima Fernandes Junior<br>43413846</p>
+						</div>
+					</div>
+					<div class="col-sm-offset-7 col-sm-3">
+						<div class="address">
+							<img src="/mqauth/43413846/public/images/home/map.png" alt="" />
+							<p>Macquarie University, Sydney Australia</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
+					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
+				</div>
+			</div>
+		</div>
+		
+	</footer><!--/Footer-->
+	
+
+  
+    <script src="/mqauth/43413846/public/js/jquery.js"></script>
+	<script src="/mqauth/43413846/public/js/bootstrap.min.js"></script>
+	<script src="/mqauth/43413846/public/js/jquery.prettyPhoto.js"></script>
+    {% block custom_js %}{% endblock %}
+</body>
+</html>
